@@ -26,4 +26,12 @@ public class NoteService {
             log.info(noteFromDb.toString());
         }
     }
+
+    public Note getById(Long id) {
+        Optional<Note> byId = noteRepository.getById(id);
+        if (!byId.isPresent()) {
+            throw new RuntimeException("Note is required");
+        }
+        return byId.get();
+    }
 }
