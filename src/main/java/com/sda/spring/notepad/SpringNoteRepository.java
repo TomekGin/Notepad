@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface SpringNoteRepository extends CrudRepository<Note, Long> {
-    public List<Note> findByTitleAndContent(String title, String content);
+    List<Note> findByTitleAndContent(String title, String content);
 }
