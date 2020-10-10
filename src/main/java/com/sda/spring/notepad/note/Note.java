@@ -1,11 +1,10 @@
-package com.sda.spring.notepad;
+package com.sda.spring.notepad.note;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.sda.spring.notepad.category.Category;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 @Data
 @Entity
@@ -17,4 +16,8 @@ public class Note {
     private String content;
     private LocalDateTime creationDate;
     private LocalDateTime lastUpdateDate;
+
+    @ManyToOne
+    @JsonBackReference
+    private Category category;
 }

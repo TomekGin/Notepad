@@ -1,6 +1,4 @@
-package com.sda.spring.notepad;
-
-import org.springframework.stereotype.Component;
+package com.sda.spring.notepad.note;
 
 import java.util.Objects;
 import java.util.Optional;

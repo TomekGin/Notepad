@@ -1,5 +1,6 @@
 package com.sda.spring.notepad;
 
+import com.sda.spring.notepad.note.Note;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
